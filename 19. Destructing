@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Destructing</title>
+</head>
+<body>
+<script>
+  function convertCurrency(amount) {
+    const converted = {
+      usd: amount * 0.8,
+      gpb: amount * 1.5,
+      aud: amount * 1.1,
+      mex: amount * 10,
+    };
+    return converted;
+  };
+
+  // const hungary = convertCurrency(100);
+  // console.log(hungary);
+
+  // const {gpb, usd} = convertCurrency(100);
+  // console.log(usd, gpb);
+
+function tipCal({total = 100, tip = 0.2, tax = 0.1}) {
+    return total = total + (total*tip) + (total*tax);
+  };
+const bill = tipCal({});
+console.log(bill);
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New String Methods</title>
+</head>
+<body>
+<script>
+  const person = {
+    first: 'Nhu',
+    last: 'Fin',
+    country: 'US',
+    city: 'Portland',
+    links: {
+      social: {
+        twitter: 'http://twitter.com/nhufin',
+        facebook: 'facebook.com/nhufin9',
+      },
+      web: {
+        blog: 'drupal-review.pantheon.io'
+      },
+    }
+  };
+
+  const {twitter: twit='nothing 1', facebook: fb, test='no'} = person.links.social;
+
+const {w: width = 400, h: height = 200} = {w: 800}
+
+</script>
+</body>
+</html>
