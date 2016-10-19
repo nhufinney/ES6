@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arrow Functions</title>
+</head>
+<body>
+
+<script>
+  const names = ['Michael', 'Hilary', 'Trump'];
+
+  const hello = names.map(function(name) {
+    return `hello ${name}`;
+  });
+  
+  const hi = names.map((name) => {
+    return `hi ${name}`;
+  });
+
+  const hey = names.map(name => {
+    return `hey ${name}`;
+  });
+
+  const heyhey = names.map(name => `hey! hey! ${name}`);
+
+  const unanimous = names.map(() => `hey there!`);
+
+  console.log(unanimous);
+
+  const callNameFunction = (name) => {
+    console.log(`Hello ${name}`)
+  };
+  callNameFunction('Clinton');
+
+
+  // combine arrow function with objects
+  const race = '100m Race';
+  const runners = ['Lady Gaga', 'Phillip Halls', 'Universal Waite'];
+
+  const win = runners.map((runner, i) => ({
+    name: runner,
+    race,
+    place: i+1,
+  })); //note: return object should be inside of ()
+  console.table(win);
+
+
+  const nums = [ 423, 32, 41, 1, 89, 53, 7, 92];
+  const filterNum = nums.filter(num => num >=40); //return number >=40
+  console.log(filterNum);
+
+</script>
+</body>
+</html>
