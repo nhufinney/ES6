@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arrow Functions</title>
+</head>
+<body>
+
+<script>
+  function calculation(total, tax = 0.085, tip = 0.15) {
+    return total + (total * tax) + (total * tip);
+  }
+
+  console.log(calculation(100));
+  console.log(calculation(200, undefined, 0.2 ));
+
+</script>
+</body>
+</html>
