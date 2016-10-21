@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arrow Functions</title>
+</head>
+<body>
+
+<script>
+  
+  const students = [
+    {name: 'Waite', age: 1},
+    {name: 'Lucky', age: 3},
+    {name: 'Lil', age: 4}
+  ];
+
+  const markup = `
+    <ul class="students">
+        ${students.map(student => `
+            <li> My favorite student is ${student.name}.
+                 His/her is ${student.age * 2} years old now.
+            </li>`).join('')}
+    </ul>
+  `;
+
+  document.body.innerHTML = markup;
+
+// **********//
+  //if function in template
+  const song = {
+    name: 'Hello',
+    artist: 'Tupac',
+    type: 'classic'
+  };
+
+  const content = `
+    <div class="song">
+        <p>
+            ${song.name} - ${song.artist}
+            ${song.type ? `(Featuere is ${song.type})`: ''}
+        </p>
+    </div>
+  `;
+  document.body.innerHTML = content;
+
+// **********//
+  //render nested contents
+  const beer = {
+    name: 'Belgian Wit', 
+    brewery: 'Steam Whisky',
+    keywords: ['pale', 'cloudy', 'spiced', 'crisp']
+  };
+
+  function renderKeywords(keywords) {
+    return `
+        <ul>
+            ${keywords.map(keyword => `<li>${keyword}</li>`).join('')}
+        </ul>
+    `;
+  };
+
+  const article = `
+    <div class="beer">
+        <h2>${beer.name}</h2>
+        <p class="brewery">${beer.brewery}</p>
+        ${renderKeywords(beer.keywords)}
+    </div>
+  `;
+
+  document.body.innerHTML = article;
+
+</script>
+</body>
+</html>
